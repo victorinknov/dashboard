@@ -6,21 +6,12 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-ul, ul li, ul li a {
-    list-style: none;
-    text-decoration: none;
-}
-
 .left-sidebar {
     position: fixed;
     height: 100%;
     width: 10vw;
     border: 0px;    
     background-color: #282a36; 
-}
-
-ul li:hover {
-
 }
 
 .logo-brand {
@@ -35,6 +26,7 @@ ul li:hover {
 }
 
 .logo-brand img:hover {
+    width: 7.7vw;
 }
 
 hr {
@@ -44,21 +36,6 @@ hr {
     opacity: .5;
     border: 1px solid #4b8fef;
     border-radius: 50%;
-}
-
-.left-sidebar ul {
-    display: block;  
-    text-align: left;   
-    margin: auto;
-    color: white;
-}
-
-.left-sidebar ul li {
-    display: flex;
-    align-items: center;
-    margin: .2rem;
-    justify-content: center;
-    min-height: 32px;
 }
 
 .user-space {
@@ -89,6 +66,29 @@ hr {
     border-radius: 50%; 
 }
 
+.user-picture:hover {
+    filter: grayscale(80) blur(.7px);
+    opacity: .5;
+}
+
+.user-config:hover + .user-picture {
+    filter: grayscale(80) blur(.7px);
+    opacity: .5;
+}
+
+.user-config {
+    position: absolute;
+    z-index: 9999;
+    fill: white;
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+
+.user-config:hover {
+    cursor: pointer;
+}
+
 .user-name {
     text-transform: uppercase;
     color: white;
@@ -101,7 +101,6 @@ hr {
     text-align: center; 
     border-radius: 1rem;
 }
-
 
 .modal-profile-options {
     
@@ -139,4 +138,29 @@ hr {
     font-size: 12px;
     font-weight:bolder;
     text-align: center;
+}
+
+.modal-config {
+    background: rgba(1,1,1,.5);
+    width: 10vw;
+    left: 11vw;
+    bottom: 1rem;
+    height: 15vh;
+    border-radius: .5rem;
+    visibility: hidden;
+    position: absolute;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+} 
+
+nav ul li {
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    margin-top: auto;
 }
