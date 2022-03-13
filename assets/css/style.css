@@ -19,6 +19,10 @@ ul, ul li, ul li a {
     background-color: #282a36; 
 }
 
+ul li:hover {
+
+}
+
 .logo-brand {
     display: flex;
     align-items: center;
@@ -88,11 +92,51 @@ hr {
 .user-name {
     text-transform: uppercase;
     color: white;
-    font-size: 14px;
-    margin: 10px;    
+    font-size: 12px;
+    font-weight: bolder;
+    margin: 10px;
+    background-color: #6272a4;
+    width: 90%;
+    padding: 5px;
+    text-align: center; 
+    border-radius: 1rem;
 }
 
 
 .modal-profile-options {
     
+}
+
+.status {
+    display: flex;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    border-radius: 50%;
+}
+
+.online {
+    background-color: #50fa7b;
+}
+
+.mini-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.notifications {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight:bolder;
+    text-align: center;
 }
