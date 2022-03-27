@@ -47,10 +47,6 @@ body.dark{
     --text-color: #ccc;
 }
 
-#logo:hover {
-    background: url('/assets/img/logo-blue.svg')
-}
-
 /* ===== Sidebar ===== */
  .sidebar{
     position: fixed;
@@ -332,4 +328,43 @@ body.dark .home .text{
 .suave {
     transition: var(--tran-07);
 
+}
+
+
+@keyframes infinite-spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+    
+  }
+  
+  .infinite-spin {
+    animation-duration: 1s;
+    animation-name: infinite-spin;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.normal {
+    animation-duration: 1s;
+    filter: blur(.25px);
+}
+
+.fast {
+    animation-duration: .75s;
+    filter: blur(.5px);
+}
+
+.faster {
+    animation-duration: .5s;
+    filter: blur(.75px);
+}
+
+.fucking-faster {
+    animation-duration: .3s;
+    filter: blur(1px);
 }
