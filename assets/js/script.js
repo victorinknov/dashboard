@@ -1,24 +1,31 @@
-let gear = document.getElementById('gear')
-let userImg = document.getElementById('user-picture')
-let modalConfig = document.getElementById('modal-config')
-let closeModal = document.getElementById('close-button')
+const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text"),
+      logo = body.querySelector('#logo')
 
-userImg.addEventListener('mouseover', ()=>{
-    gear.style.visibility = 'visible'
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+    logo.classList.toggle("rotate");
+    logo.classList.toggle("suave");
 })
 
-gear.addEventListener('mouseover', ()=>{
-    gear.style.visibility = 'visible'
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
 })
 
-userImg.addEventListener('mouseleave', ()=>{
-    gear.style.visibility = 'hidden'
-})
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
 
-gear.addEventListener('click', ()=>{
-    modalConfig.style.visibility = 'visible'
-})
-
-closeModal.addEventListener('click', ()=>{
-    modalConfig.style.visibility = 'hidden'
-})
+// easter egg 
