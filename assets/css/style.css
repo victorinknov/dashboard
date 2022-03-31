@@ -320,6 +320,16 @@ body.dark .home .text{
     color: var(--text-color);
 }
 
+.sidebar li a.active {
+    background-color: var(--primary-color);
+    color: white !important;
+} 
+
+.active {
+    color: white !important;
+
+}
+
 .rotate {
     transform: rotateZ(180deg);
     transition: var(--tran-06);
@@ -329,7 +339,6 @@ body.dark .home .text{
     transition: var(--tran-07);
 
 }
-
 
 @keyframes infinite-spin {
     from {
