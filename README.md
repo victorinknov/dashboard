@@ -1,9 +1,9 @@
 ## Preview
-# Dark Mode
+### Dark Mode
 ![website preview](./previews/dark-compressed.png)
 ![website preview](./previews/dark.png)
 
-# Light Mode
+### Light Mode
 ![website preview](./previews/light-compressed.png)
 ![website preview](./previews/light.png)
 
